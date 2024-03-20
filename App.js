@@ -11,27 +11,23 @@ import futuristicshelves from './Images/pexels-photo-2177482.jpeg'
 import glasstable from './Images/pexels-photo-1571452.jpeg'
 import kingbed from './Images/pexels-photo-6489083.webp'
 import loungechair from './Images/pexels-photo-2082090.webp'
-/* import Home from "./Pages/Home";
-import About from "./Pages/About";
-import{ BrowserRouter as Router, Routes, Route } from 'react-router-dom' */
-
 
 function App() {
   return (
-  <>  
-      <Navigation />
-      <Filters />
-      <Products image = {avantlamp} name = 'Avant-Garde Lamp' price={179.99} />
-      <Products image = {chicchair} name = 'Chic Chair' price={339.99} />
-      <Products image = {coffeetable} name = 'Coffee Table' price={179.99} />
-      <Products image = {comfybed} name = 'Comfy Bed' price={129.99} />
-      <Products image = {contempsofa} name = 'Contemporary Sofa' price={159.99} />
-      <Products image = {cuttingedgebed} name = 'Cutting-Edge Bed' price={84.99} />
-      <Products image = {futuristicshelves} name = 'Futuristic Shelves' price={94.99} />
-      <Products image = {glasstable} name = 'Glass Table' price={159.99} />
-      <Products image = {kingbed} name = 'King Bed' price={189.99} />
-      <Products image = {loungechair} name = 'Lounge Chair' price={259.99} />
-  </>  
+    <>  
+        <Navigation />
+        <Filters />
+        <Products image = {avantlamp} name = 'Avant-Garde Lamp' price={179.99} />
+        <Products image = {chicchair} name = 'Chic Chair' price={339.99} />
+        <Products image = {coffeetable} name = 'Coffee Table' price={179.99} />
+        <Products image = {comfybed} name = 'Comfy Bed' price={129.99} />
+        <Products image = {contempsofa} name = 'Contemporary Sofa' price={159.99} />
+        <Products image = {cuttingedgebed} name = 'Cutting-Edge Bed' price={84.99} />
+        <Products image = {futuristicshelves} name = 'Futuristic Shelves' price={94.99} />
+        <Products image = {glasstable} name = 'Glass Table' price={159.99} />
+        <Products image = {kingbed} name = 'King Bed' price={189.99} />
+        <Products image = {loungechair} name = 'Lounge Chair' price={259.99} />
+    </>  
   );
 }
 
