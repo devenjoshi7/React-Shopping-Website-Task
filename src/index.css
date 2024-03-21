@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(44, 44, 45);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 8px;
+    background-color: rgb(48, 47, 75);
+    
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(70, 69, 118);
+    padding: 10px;
+    
+}
+
+.profile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(70, 69, 118);    
+}
+
+.profile-nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+    background-color: rgb(70, 69, 118);
+    
+}
+
+.profile-nav ul li a {
+    background-color: rgb(70, 69, 118);
+}
+
+.account-nav {
+    background-color: rgb(70, 69, 118);
+    color: white;
+    
+}
+
+.account-nav:hover {
+    text-decoration: underline;
+}
+
+.nav-container {
+    background-color: rgb(32, 32, 36);
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 40px;
+  }
+  
+  .nav-container nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+    background-color: rgb(32, 32, 36);
+  }
+
+  .nav-container nav a {
+    background-color: rgb(32, 32, 36);
+    margin: 12px;
+  }
+
+  .nav-container .pages-container .home-page {
+    position: absolute;
+    left: 0;
+    margin-left: 180px;
+    background-color: rgb(250, 110, 187);
+    color: black;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 2px;
+    
+  }
+
+  .nav-container .pages-container .home-page:hover {
+    cursor: pointer;
+    background-color: rgb(236, 65, 176);
+    transition: 0.25s;
+  }
+
+  .nav-container .pages-container .nav-pages:hover {
+    background-color: hsl(0, 0%, 35% );
+    transition: 0.25s;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 4px;
+  }
+
+  .nav-container .pages-container .nav-pages:active {
+    background-color: hsl(0, 0%, 35% );
+  }
+  
+  .nav-container .icons-container {
+    background-color: rgb(32, 32, 36);
+    position: absolute;
+    top: 50%;
+    right: 200px;
+    transform: translateY(-50%);
+  }
+  
+  .nav-container .icons-container .cart-icon {
+    margin-left: 5px;
+    background-color: rgb(32, 32, 36);
+  }
+  .nav-container .icons-container .theme-icon {
+    margin-left: 5px;
+    background-color: rgb(32, 32, 36);
+  }
+
+  .nav-container .icons-container .cart-icon:hover{
+    border-radius: 50px;
+    background-color: rgb(150, 150, 170);
+    transition: 0.25s;
+    
+  }
+
+  .nav-container .icons-container .theme-icon:hover {
+    cursor: pointer;
+  }

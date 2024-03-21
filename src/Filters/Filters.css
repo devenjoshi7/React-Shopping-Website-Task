@@ -1,0 +1,177 @@
+.form {
+    padding: 18px;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 160px;
+    margin-right: 80px;
+}
+
+.form .label-container {
+    background-color: rgb(32, 32, 36);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 90%;
+}
+
+.form .filter-label {
+    display: inline-block;
+    background-color: rgb(32, 32, 36);
+    padding: 10px;
+    margin: 10px;
+    width: 16%;
+    margin-right: 15px;
+    
+}
+
+.form .filter-select {
+    display: inline-block;
+    background-color: rgb(32, 32, 36);
+    padding: 6px;
+    margin: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16%;
+    border-color: rgb(66, 66, 67);
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.form .select-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+}
+
+.form .price-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+}
+
+.form .price-container .filter-price {
+    background-color: rgb(32, 32, 36);
+    display: inline-block;
+    padding: 10px;
+    width: 16%;
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.form .price-container .filter-button-search {
+    padding: 5px;
+    width: 16%;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: rgb(250, 110, 187);
+    color: black;
+    font-weight: bold;
+}
+
+.form .price-container .filter-button-search:hover {
+    cursor: pointer;
+    background-color: rgb(227, 76, 159);
+    transition: 0.25s;
+}
+
+.form .price-container .filter-button-reset {
+    padding: 5px;
+    width: 16%;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: rgb(237, 237, 59);
+    color: black;
+    font-weight: bold;
+}
+
+.form .price-container .filter-button-reset:hover {
+    cursor: pointer;
+    background-color: rgb(202, 202, 45);
+    transition: 0.25s;
+}
+
+.form .range-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+    height: 20px;
+}
+
+.form .range-container .filter-range {
+    width: 23.5%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.form .range-container .filter-range-checkbox {
+    width: 22%;
+    margin-left: 30px;
+}
+
+.form .range-container .filter-range-checkbox:hover {
+    cursor: pointer;
+}
+
+.form .range-details {
+    background-color: rgb(32, 32, 36);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0;
+}
+
+.form .range-details .max-range {
+    font-size: 0.8rem;
+    background-color: rgb(32, 32, 36);
+    margin-bottom: 15px;
+    margin-left: 72px;
+    margin-right: 10px;
+
+}
+
+.form .range-details .zero-range {
+    font-size: 0.8rem;
+    background-color: rgb(32, 32, 36);
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 65px;
+}
+
+.form .count-container {
+    margin-top: 30px;
+}
+
+.form .count-container .product-count {
+    font-size: 0.8rem;    
+}
+
+.form .product-display {
+    position: absolute;
+    top: 46%;
+    right: 130px;
+    transform: translateY(600%);
+}
+
+.form .product-display .grid-display {
+    margin-right: 10px;
+}
+
+.form .product-display .grid-display:hover {
+    background-color: hsl(0, 0%, 35% );
+    cursor: pointer;
+    
+}
+
+.form .product-display .list-display:hover {
+    background-color: hsl(0, 0%, 35% );
+    cursor: pointer;
+}
+
+.form hr {
+    height: 1px;
+    width: 90%;
+    margin-top: 30px;
+    background-color: black;
+    border: none;
+}
