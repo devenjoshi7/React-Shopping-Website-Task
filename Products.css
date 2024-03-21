@@ -1,35 +1,524 @@
-.card {
+.main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    border: 1px solid white;
+    
+}
+
+.main .avant-lamp {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
     border: 1px solid rgb(44, 44, 45);
     border-radius: 10px;
-    padding-bottom: 30px;
-    padding-top: 10px;
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-right: 10px;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 300px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 130px;
+    
 }
 
-.card .card-image {
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.card .card-name {
-    font-family: sans-serif;
-    font-weight: normal;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.card .card-price {
-    color: blueviolet;
-    font-size: 1rem;
-}
-
-.card:hover {
+.main .avant-lamp:hover {
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .avant-lamp .lamp-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .avant-lamp .lamp-figure .lamp-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .avant-lamp .lamp-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .avant-lamp .lamp-details .lamp-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .avant-lamp .lamp-details .lamp-price {
+    color: blueviolet;
+}
+
+.main .chic-chair {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .chic-chair:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .chic-chair .chic-chair-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .chic-chair .chic-chair-figure .chic-chair-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .chic-chair .chic-chair-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .chic-chair .chic-chair-details .chic-chair-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .chic-chair .chic-chair-details .chic-chair-price {
+    color: blueviolet;
+}
+
+.main .coffee-table {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .coffee-table:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .coffee-table .coffee-table-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .coffee-table .coffee-table-figure .coffee-table-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .coffee-table .coffee-table-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .coffee-table .coffee-table-details .coffee-table-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .coffee-table .coffee-table-details .coffee-table-price {
+    color: blueviolet;
+}
+
+.main .comfybed {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+.main .comfybed:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .comfybed .comfybed-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .comfybed .comfybed-figure .comfybed-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .comfybed .comfybed-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .comfybed .comfybed-details .comfybed-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .comfybed .comfybed-details .comfybed-price {
+    color: blueviolet;
+}
+
+.main .contempsofa {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .contempsofa:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .contempsofa .contempsofa-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .contempsofa .contempsofa-figure .contempsofa-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .contempsofa .contempsofa-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .contempsofa .contempsofa-details .contempsofa-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .contempsofa .contempsofa-details .contempsofa-price {
+    color: blueviolet;
+}
+
+.main .cuttingedgebed {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .cuttingedgebed:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .cuttingedgebed .cuttingedgebed-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .cuttingedgebed .cuttingedgebed-figure .cuttingedgebed-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .cuttingedgebed .cuttingedgebed-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .cuttingedgebed .cuttingedgebed-details .cuttingedgebed-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .cuttingedgebed .cuttingedgebed-details .cuttingedgebed-price {
+    color: blueviolet;
+}
+
+.main .futuristicshelves {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+.main .futuristicshelves:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .futuristicshelves .futuristicshelves-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .futuristicshelves .futuristicshelves-figure .futuristicshelves-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .futuristicshelves .futuristicshelves-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .futuristicshelves .futuristicshelves-details .futuristicshelves-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .futuristicshelves .futuristicshelves-details .futuristicshelves-price {
+    color: blueviolet;
+}
+
+.main .glasstable {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .glasstable:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .glasstable .glasstable-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .glasstable .glasstable-figure .glasstable-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .glasstable .glasstable-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .glasstable .glasstable-details .glasstable-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .glasstable .glasstable-details .glasstable-price {
+    color: blueviolet;
+}
+
+.main .kingbed {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.main .kingbed:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .kingbed .kingbed-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .kingbed .kingbed-figure .kingbed-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .kingbed .kingbed-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .kingbed .kingbed-details .kingbed-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .kingbed .kingbed-details .kingbed-price {
+    color: blueviolet;
+}
+
+.main .loungechair {
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid rgb(44, 44, 45);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(44, 44, 45);
+    padding: 10px;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+
+.main .loungechair:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+.main .loungechair .loungechair-figure {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 1rem;
+}
+
+.main .loungechair .loungechair-figure .loungechair-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+
+}
+
+.main .loungechair .loungechair-details {
+    font-size: 15px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .loungechair .loungechair-details .loungechair-name {
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.main .loungechair .loungechair-details .loungechair-price {
+    color: blueviolet;
 }
