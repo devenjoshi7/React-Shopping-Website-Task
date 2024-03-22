@@ -1,4 +1,4 @@
-import './Nav.css'
+
 import {PiShoppingCartLight} from 'react-icons/pi'
 import {MdSunny} from 'react-icons/md'
 

@@ -22,7 +22,7 @@ import Filters from '../Filters/Filters'
 
         <div className='main'>
           
-          <a href="" className='avant-lamp'>
+          <a href="/AvantLampDetails" className='avant-lamp'>
             <figure className='lamp-figure'>
               <img src={avantlamp} alt="Product" className='lamp-image' />
             </figure>
@@ -32,7 +32,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
 
-          <a href="" className='chic-chair'>
+          <a href="/ChicChairDetails" className='chic-chair'>
             <figure className='chic-chair-figure'>
               <img src={chicchair} alt="Product" className='chic-chair-image' />
             </figure>
@@ -42,17 +42,17 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
 
-          <a href="" className='coffee-table'>
+          <a href="/CoffeeTableDetails" className='coffee-table'>
             <figure className='coffee-table-figure'>
               <img src={coffeetable} alt="Product" className='coffee-table-image' />
             </figure>
             <div className='coffee-table-details'>
               <h2 className='coffee-table-name'>Coffee Table</h2>
-              <span className='coffee-table-price'>$339.99</span>
+              <span className='coffee-table-price'>$179.99</span>
             </div>
           </a>
 
-          <a href="" className='comfybed'>
+          <a href="/ComfyBedDetails" className='comfybed'>
             <figure className='comfybed-figure'>
               <img src={comfybed} alt="Product" className='comfybed-image' />
             </figure>
@@ -62,7 +62,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
           
-          <a href="" className='contempsofa'>
+          <a href="/ContempSofaDetails" className='contempsofa'>
             <figure className='contempsofa-figure'>
               <img src={contempsofa} alt="Product" className='contempsofa-image' />
             </figure>
@@ -72,7 +72,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
           
-          <a href="" className='cuttingedgebed'>
+          <a href="/CuttingEdgeBed" className='cuttingedgebed'>
             <figure className='cuttingedgebed-figure'>
               <img src={cuttingedgebed} alt="Product" className='cuttingedgebed-image' />
             </figure>
@@ -82,7 +82,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
           
-          <a href="" className='futuristicshelves'>
+          <a href="/FuturisticShelvesDetails" className='futuristicshelves'>
             <figure className='futuristicshelves-figure'>
               <img src={futuristicshelves} alt="Product" className='futuristicshelves-image' />
             </figure>
@@ -92,7 +92,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
 
-          <a href="" className='glasstable'>
+          <a href="/GlassTableDetails" className='glasstable'>
             <figure className='glasstable-figure'>
               <img src={glasstable} alt="Product" className='glasstable-image' />
             </figure>
@@ -102,7 +102,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
 
-          <a href="" className='kingbed'>
+          <a href="/KingBedDetails" className='kingbed'>
             <figure className='kingbed-figure'>
               <img src={kingbed} alt="Product" className='kingbed-image' />
             </figure>
@@ -112,7 +112,7 @@ import Filters from '../Filters/Filters'
             </div>
           </a>
 
-          <a href="" className='loungechair'>
+          <a href="/LoungeChairDetails" className='loungechair'>
             <figure className='loungechair-figure'>
               <img src={loungechair} alt="Product" className='loungechair-image' />
             </figure>

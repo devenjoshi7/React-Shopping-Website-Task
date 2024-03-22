@@ -3,6 +3,7 @@ import { IoGrid } from "react-icons/io5";
 import { BsList } from "react-icons/bs";
 
 function Filters() {
+
     return(
         <div className="filter-container">
             <form className="form">
