@@ -1,3 +1,186 @@
+.form {
+    padding: 18px;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+    margin-left: 160px;
+    margin-right: 80px;
+}
+
+.form .label-container {
+    background-color: rgb(32, 32, 36);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 90%;
+}
+
+.form .filter-label {
+    display: inline-block;
+    background-color: rgb(32, 32, 36);
+    padding: 10px;
+    margin: 10px;
+    width: 16%;
+    margin-right: 15px;
+    
+}
+
+.form .filter-select {
+    display: inline-block;
+    background-color: rgb(32, 32, 36);
+    padding: 6px;
+    margin: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 16%;
+    border-color: rgb(66, 66, 67);
+    border-radius: 10px;
+    margin-left: 15px;
+}
+.form .filter-select:hover {
+    cursor: pointer;
+}
+
+.form .select-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+}
+
+.form .price-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+}
+
+.form .price-container .filter-price {
+    background-color: rgb(32, 32, 36);
+    display: inline-block;
+    padding: 10px;
+    width: 16%;
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.form .price-container .filter-button-search {
+    padding: 5px;
+    width: 16%;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: rgb(250, 110, 187);
+    color: black;
+    font-weight: bold;
+}
+
+.form .price-container .filter-button-search:hover {
+    cursor: pointer;
+    background-color: rgb(227, 76, 159);
+    transition: 0.25s;
+}
+
+.form .price-container .filter-button-reset {
+    padding: 5px;
+    width: 16%;
+    margin-left: 15px;
+    border-radius: 10px;
+    background-color: rgb(237, 237, 59);
+    color: black;
+    font-weight: bold;
+}
+
+.form .price-container .filter-button-reset:hover {
+    cursor: pointer;
+    background-color: rgb(202, 202, 45);
+    transition: 0.25s;
+}
+
+.form .range-container {
+    background-color: rgb(32, 32, 36);
+    width: 90%;
+    height: 20px;
+}
+
+.form .range-container .filter-range {
+    width: 23.5%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.form .range-container .filter-range:hover {
+    cursor: pointer;
+}
+
+.form .range-container .filter-range-checkbox {
+    width: 22%;
+    margin-left: 30px;
+}
+
+.form .range-container .filter-range-checkbox:hover {
+    cursor: pointer;
+}
+
+.form .range-details {
+    background-color: rgb(32, 32, 36);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 0;
+}
+
+.form .range-details .max-range {
+    font-size: 0.8rem;
+    background-color: rgb(32, 32, 36);
+    margin-bottom: 15px;
+    margin-left: 72px;
+    margin-right: 10px;
+
+}
+
+.form .range-details .zero-range {
+    font-size: 0.8rem;
+    background-color: rgb(32, 32, 36);
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 65px;
+}
+
+.form .count-container {
+    margin-top: 30px;
+}
+
+.form .count-container .product-count {
+    font-size: 0.8rem;    
+}
+
+.form .product-display {
+    position: absolute;
+    top: 46%;
+    right: 130px;
+    transform: translateY(600%);
+}
+
+.form .product-display .grid-display {
+    margin-right: 10px;
+}
+
+.form .product-display .grid-display:hover {
+    background-color: hsl(0, 0%, 35% );
+    cursor: pointer;
+    
+}
+
+.form .product-display .list-display:hover {
+    background-color: hsl(0, 0%, 35% );
+    cursor: pointer;
+}
+
+.form hr {
+    height: 1px;
+    width: 90%;
+    margin-top: 30px;
+    background-color: black;
+    border: none;
+}
+
 .main {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -9,7 +192,7 @@
     
 }
 
-.main .avant-lamp {
+.main .product {
     position: relative;
     display: inline-block;
     flex-direction: column;
@@ -23,19 +206,19 @@
     
 }
 
-.main .avant-lamp:hover {
+.main .product:hover {
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
 }
 
-.main .avant-lamp .lamp-figure {
+.main .product .product-figure {
     display: flex;
     align-items: start;
     justify-content: start;
     padding: 1rem;
 }
 
-.main .avant-lamp .lamp-figure .lamp-image {
+.main .product .product-figure .product-image {
     height: 200px;
     width: 200px;
     object-fit: cover;
@@ -45,480 +228,18 @@
 
 }
 
-.main .avant-lamp .lamp-details {
+.main .product .product-details {
     font-size: 15px;
     font-family: sans-serif;
     text-align: center;
     margin-bottom: 10px;
 }
 
-.main .avant-lamp .lamp-details .lamp-name {
+.main .product .product-details .product-name {
     font-family: sans-serif;
     margin-bottom: 5px;
 }
 
-.main .avant-lamp .lamp-details .lamp-price {
-    color: blueviolet;
-}
-
-.main .chic-chair {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .chic-chair:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .chic-chair .chic-chair-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .chic-chair .chic-chair-figure .chic-chair-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .chic-chair .chic-chair-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .chic-chair .chic-chair-details .chic-chair-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .chic-chair .chic-chair-details .chic-chair-price {
-    color: blueviolet;
-}
-
-.main .coffee-table {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .coffee-table:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .coffee-table .coffee-table-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .coffee-table .coffee-table-figure .coffee-table-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .coffee-table .coffee-table-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .coffee-table .coffee-table-details .coffee-table-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .coffee-table .coffee-table-details .coffee-table-price {
-    color: blueviolet;
-}
-
-.main .comfybed {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 130px;
-    margin-top: 50px;
-}
-
-.main .comfybed:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .comfybed .comfybed-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .comfybed .comfybed-figure .comfybed-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .comfybed .comfybed-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .comfybed .comfybed-details .comfybed-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .comfybed .comfybed-details .comfybed-price {
-    color: blueviolet;
-}
-
-.main .contempsofa {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .contempsofa:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .contempsofa .contempsofa-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .contempsofa .contempsofa-figure .contempsofa-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .contempsofa .contempsofa-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .contempsofa .contempsofa-details .contempsofa-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .contempsofa .contempsofa-details .contempsofa-price {
-    color: blueviolet;
-}
-
-.main .cuttingedgebed {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .cuttingedgebed:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .cuttingedgebed .cuttingedgebed-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .cuttingedgebed .cuttingedgebed-figure .cuttingedgebed-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .cuttingedgebed .cuttingedgebed-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .cuttingedgebed .cuttingedgebed-details .cuttingedgebed-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .cuttingedgebed .cuttingedgebed-details .cuttingedgebed-price {
-    color: blueviolet;
-}
-
-.main .futuristicshelves {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 130px;
-    margin-top: 50px;
-}
-
-.main .futuristicshelves:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .futuristicshelves .futuristicshelves-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .futuristicshelves .futuristicshelves-figure .futuristicshelves-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .futuristicshelves .futuristicshelves-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .futuristicshelves .futuristicshelves-details .futuristicshelves-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .futuristicshelves .futuristicshelves-details .futuristicshelves-price {
-    color: blueviolet;
-}
-
-.main .glasstable {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .glasstable:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .glasstable .glasstable-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .glasstable .glasstable-figure .glasstable-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .glasstable .glasstable-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .glasstable .glasstable-details .glasstable-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .glasstable .glasstable-details .glasstable-price {
-    color: blueviolet;
-}
-
-.main .kingbed {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 100px;
-}
-
-.main .kingbed:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .kingbed .kingbed-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .kingbed .kingbed-figure .kingbed-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .kingbed .kingbed-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .kingbed .kingbed-details .kingbed-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .kingbed .kingbed-details .kingbed-price {
-    color: blueviolet;
-}
-
-.main .loungechair {
-    position: relative;
-    display: inline-block;
-    flex-direction: column;
-    box-sizing: border-box;
-    border: 1px solid rgb(44, 44, 45);
-    border-radius: 10px;
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgb(44, 44, 45);
-    padding: 10px;
-    margin-left: 130px;
-    margin-top: 50px;
-}
-
-.main .loungechair:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
-}
-
-.main .loungechair .loungechair-figure {
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 1rem;
-}
-
-.main .loungechair .loungechair-figure .loungechair-image {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin: 5px;
-    margin-bottom: 0;
-
-}
-
-.main .loungechair .loungechair-details {
-    font-size: 15px;
-    font-family: sans-serif;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.main .loungechair .loungechair-details .loungechair-name {
-    font-family: sans-serif;
-    margin-bottom: 5px;
-}
-
-.main .loungechair .loungechair-details .loungechair-price {
+.main .product .product-details .product-price {
     color: blueviolet;
 }

@@ -1,127 +1,98 @@
-import avantlamp from '../Images/pexels-photo-943150.webp'
-import chicchair from '../Images/pexels-photo-5705090.webp'
-import coffeetable from '../Images/pexels-photo-3679601.jpeg'
-import comfybed from '../Images/pexels-photo-1034584.jpeg'
-import contempsofa from '../Images/pexels-photo-1571459.webp'
-import cuttingedgebed from '../Images/pexels-photo-2029694.jpeg'
-import futuristicshelves from '../Images/pexels-photo-2177482.jpeg'
-import glasstable from '../Images/pexels-photo-1571452.jpeg'
-import kingbed from '../Images/pexels-photo-6489083.webp'
-import loungechair from '../Images/pexels-photo-2082090.webp'
 import './Products.css'
 import Navigation from '../Navigation/Nav'
-import Filters from '../Filters/Filters'
+import data from '../data/data'
+import { useState } from 'react';
+import { IoGrid } from "react-icons/io5";
+import { BsList } from "react-icons/bs";
  
  function Products() {
+
+  const [range, setRange] = useState(0)
+
+  const [search, setSearch] = useState('')
+
   return (
     <>
       <Navigation />
-      <Filters />
 
       <div>
 
+        <form className="form">
+
+          <div className="label-container">
+            <label className='filter-label' htmlFor="search">Search Product</label>
+            <label className='filter-label' htmlFor="category">Select Category</label>
+            <label className='filter-label' htmlFor="company">Select Company</label>
+            <label className='filter-label' htmlFor="sort">Sort By</label>
+          </div>
+          <div className='select-container'>
+            <input className='filter-select' type="text" name="search" id="search" />
+              <select className='filter-select' name="category" id="category">
+                <option value="all">all</option>
+                <option value="Tables">Tables</option>
+                <option value="Chairs">Chairs</option>
+                <option value="Kids">Kids</option>
+                <option value="Sofas">Sofas</option>
+                <option value="Beds">Beds</option>
+              </select>
+              <select className='filter-select' name="company" id="company">
+                <option value="all">all</option>
+                <option value="Modenza">Modenza</option>
+                <option value="Luxora">Luxora</option>
+                <option value="Artifex">Artifex</option>
+                <option value="Comfora">Comfora</option>
+                <option value="HomeStead">Homestead</option>
+              </select>
+              <select className='filter-select' name="sort" id="sort">
+                <option value="a-z">a-z</option>
+                <option value="z-a">z-a</option>
+                <option value="high">high</option>
+                <option value="low">low</option>
+              </select>
+          </div>
+          <div className='price-container'>
+            <label className='filter-price' htmlFor="price"> Select Price </label>
+            <label className='filter-price' htmlFor="pricenumber">${range}</label>
+            <label className='filter-price' htmlFor="shipping">Free Shipping</label>
+            <button className='filter-button-search' type="submit" onClick={(e) => setSearch(e.target.value)}>Search</button>
+            <button className='filter-button-reset' type="reset">Reset</button>
+          </div>
+          <div className='range-container'>
+            <input className='filter-range' type="range" name="price" id="price" min={0} max={1000} onChange={(e) => setRange(e.target.value)} />
+            <input className='filter-range-checkbox' type="checkbox" name="shipping" id="shipping" />                
+          </div>
+          <div className='range-details'>
+            <label className='zero-range' htmlFor="zero">0</label>
+            <label className='max-range' htmlFor="max">Max:$1000.00</label>
+          </div>
+          <div className='count-container'>
+            <label className='product-count' htmlFor="no-of-products">22 Products</label>
+          </div>
+          <div className='product-display'>    
+            <IoGrid className='grid-display' />
+            <BsList className='list-display' />
+          </div>
+          <div>
+            <hr className='horizontal' />
+          </div>
+
+        </form>
+
         <div className='main'>
+
+          {data.filter((item) => {
+            return search.toLowerCase() === '' ? item : item.title.toLowerCase().includes(search)
+          }).map((item) => <a href={item.id} className='product'>
+            <input type="hidden" name="id" value={item.id} />
+            <figure className='product-figure'>
+              <img src={item.img} alt="Product" className='product-image' />
+            </figure>
+            <div className='product-details'>
+              <h2 className='product-name'>{item.title}</h2>
+              <span className='product-price'>{item.price}</span>
+            </div>
+          </a>)}
           
-          <a href="/AvantLampDetails" className='avant-lamp'>
-            <figure className='lamp-figure'>
-              <img src={avantlamp} alt="Product" className='lamp-image' />
-            </figure>
-            <div className='lamp-details'>
-              <h2 className='lamp-name'>Avant-Garde Lamp</h2>
-              <span className='lamp-price'>$179.99</span>
-            </div>
-          </a>
-
-          <a href="/ChicChairDetails" className='chic-chair'>
-            <figure className='chic-chair-figure'>
-              <img src={chicchair} alt="Product" className='chic-chair-image' />
-            </figure>
-            <div className='chic-chair-details'>
-              <h2 className='chic-chair-name'>Chic Chair</h2>
-              <span className='chic-chair-price'>$339.99</span>
-            </div>
-          </a>
-
-          <a href="/CoffeeTableDetails" className='coffee-table'>
-            <figure className='coffee-table-figure'>
-              <img src={coffeetable} alt="Product" className='coffee-table-image' />
-            </figure>
-            <div className='coffee-table-details'>
-              <h2 className='coffee-table-name'>Coffee Table</h2>
-              <span className='coffee-table-price'>$179.99</span>
-            </div>
-          </a>
-
-          <a href="/ComfyBedDetails" className='comfybed'>
-            <figure className='comfybed-figure'>
-              <img src={comfybed} alt="Product" className='comfybed-image' />
-            </figure>
-            <div className='comfybed-details'>
-              <h2 className='comfybed-name'>Comfy Bed</h2>
-              <span className='comfybed-price'>$339.99</span>
-            </div>
-          </a>
-          
-          <a href="/ContempSofaDetails" className='contempsofa'>
-            <figure className='contempsofa-figure'>
-              <img src={contempsofa} alt="Product" className='contempsofa-image' />
-            </figure>
-            <div className='contempsofa-details'>
-              <h2 className='contempsofa-name'>Contemporary Sofa</h2>
-              <span className='contempsofa-price'>$339.99</span>
-            </div>
-          </a>
-          
-          <a href="/CuttingEdgeBed" className='cuttingedgebed'>
-            <figure className='cuttingedgebed-figure'>
-              <img src={cuttingedgebed} alt="Product" className='cuttingedgebed-image' />
-            </figure>
-            <div className='cuttingedgebed-details'>
-              <h2 className='cuttingedgebed-name'>Cutting-Edge Bed</h2>
-              <span className='cuttingedgebed-price'>$339.99</span>
-            </div>
-          </a>
-          
-          <a href="/FuturisticShelvesDetails" className='futuristicshelves'>
-            <figure className='futuristicshelves-figure'>
-              <img src={futuristicshelves} alt="Product" className='futuristicshelves-image' />
-            </figure>
-            <div className='futuristicshelves-details'>
-              <h2 className='futuristicshelves-name'>Futuristic Shelves</h2>
-              <span className='futuristicshelves-price'>$339.99</span>
-            </div>
-          </a>
-
-          <a href="/GlassTableDetails" className='glasstable'>
-            <figure className='glasstable-figure'>
-              <img src={glasstable} alt="Product" className='glasstable-image' />
-            </figure>
-            <div className='glasstable-details'>
-              <h2 className='glasstable-name'>Glass Table</h2>
-              <span className='glasstable-price'>$339.99</span>
-            </div>
-          </a>
-
-          <a href="/KingBedDetails" className='kingbed'>
-            <figure className='kingbed-figure'>
-              <img src={kingbed} alt="Product" className='kingbed-image' />
-            </figure>
-            <div className='kingbed-details'>
-              <h2 className='kingbed-name'>King Bed</h2>
-              <span className='kingbed-price'>$339.99</span>
-            </div>
-          </a>
-
-          <a href="/LoungeChairDetails" className='loungechair'>
-            <figure className='loungechair-figure'>
-              <img src={loungechair} alt="Product" className='loungechair-image' />
-            </figure>
-            <div className='loungechair-details'>
-              <h2 className='loungechair-name'>Lounge Chair</h2>
-              <span className='loungechair-price'>$339.99</span>
-            </div>
-          </a>
-
         </div>
 
       </div>
