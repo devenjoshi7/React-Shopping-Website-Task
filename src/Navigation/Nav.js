@@ -1,39 +1,51 @@
-
-import {PiShoppingCartLight} from 'react-icons/pi'
-import {MdSunny} from 'react-icons/md'
+import { NavLink } from "react-router-dom";
+import { PiShoppingCartLight } from "react-icons/pi";
+import { MdSunny } from "react-icons/md";
 
 function Nav() {
   return (
-    <nav className='main-nav'>
-
-      <div className='profile-container'>
-        <nav className='profile-nav'>
+    <nav className="main-nav">
+      <div className="profile-container">
+        <nav className="profile-nav">
           <ul>
-            <li> <a className='account-nav' href='Login.js'>Sign In/Guest</a> </li>
-            <li> <a className='account-nav' href='SignIn.js'>Create Account</a> </li>
-          </ul>  
+            <NavLink className="account-nav" to="/Login">
+              Sign In/Guest
+            </NavLink>
+            <NavLink className="account-nav" to="/Register">
+              Create Account
+            </NavLink>
+          </ul>
         </nav>
       </div>
 
-      <div className='nav-container'>
-        <nav className='pages-container'>
-          <a className='home-page' href="/Home">C</a>
-           <a className='nav-pages' href='/Home'>Home</a>
-           <a className='nav-pages' href='/About'>About</a>
-           <a className='nav-pages' href='/'>Products</a>
-           <a className='nav-pages' href='/Cart'>Cart</a>
+      <div className="nav-container">
+        <nav className="pages-container">
+          <NavLink className="home-page" to="/Home">
+            C
+          </NavLink>
+          <NavLink className="nav-pages" to="/Home">
+            Home
+          </NavLink>
+          <NavLink className="nav-pages" to="/About">
+            About
+          </NavLink>
+          <NavLink className="nav-pages" to="/">
+            Products
+          </NavLink>
+          <NavLink className="nav-pages" to="/Cart">
+            Cart
+          </NavLink>
 
-          <div className='icons-container'>
-            <MdSunny className='theme-icon' size={24} />
-            <a href = '/Cart'>
-              <PiShoppingCartLight className='cart-icon' size={28} />
-            </a>
+          <div className="icons-container">
+            <MdSunny className="theme-icon" size={24} />
+            <NavLink to="/Cart">
+              <PiShoppingCartLight className="cart-icon" size={28} />
+            </NavLink>
           </div>
         </nav>
       </div>
-
     </nav>
-  )
+  );
 }
 
-export default Nav
+export default Nav;

@@ -95,17 +95,20 @@ a {
     background-color: rgb(236, 65, 176);
     transition: 0.25s;
   }
+  .nav-container .pages-container .home-page.active {
+    background-color: hsl(0, 0%, 87%, 0.3);
+  }
 
   .nav-container .pages-container .nav-pages:hover {
-    background-color: hsl(0, 0%, 35% );
+    background-color: hsl(0, 0%, 35%, 0.8);
     transition: 0.25s;
     padding: 8px;
     border-radius: 5px;
     margin: 4px;
   }
-
-  .nav-container .pages-container .nav-pages:active {
-    background-color: hsl(0, 0%, 35% );
+  .nav-container .pages-container .nav-pages.active {
+    background-color: hsla(0, 0%, 87%, 0.3);
+    
   }
   
   .nav-container .icons-container {
