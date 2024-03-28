@@ -1,7 +1,18 @@
+import { useParams } from "react-router-dom";
 import "./ProductDetails.css";
-import data from "../data/data";
+import { useState, useEffect } from "react";
 
 function ProductDetails() {
+  const [products, setProducts] = useState([]);
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    fetch(`https://dummyapi.online/api/products/${id}`)
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
+  }, [id]);
+
   return (
     <div>
       <div className="main-container">
@@ -20,27 +31,23 @@ function ProductDetails() {
         </div>
 
         <div className="product-container">
-          {data.map((item) => (
-            <div>
-              <input type="hidden" name="id" value={item.id} />
-              <img className="product-image" src={item.img} alt="" />
-              <div className="product-description">
-                <h1 className="product-name">{item.title}</h1>
-                <h4 className="product-company">{item.company}</h4>
-                <p className="product-price">{item.price}</p>
-                <p className="product-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Explicabo voluptatibus modi eum corrupti repellendus,
-                  repudiandae odit incidunt neque tenetur vero aperiam ipsa
-                  doloribus placeat eveniet similique iure harum unde hic!
-                  Voluptatem eos nihil autem? Asperiores reiciendis et dolores,
-                  unde dolore deserunt repellendus ad repudiandae velit quas?
-                  Quia est placeat dicta. Delectus, fugit dolores nesciunt
-                  quaerat exercitationem iste reiciendis voluptate ut.
-                </p>
+          {Array.isArray(products) &&
+            products.map((product) => (
+              <div key={product.id}>
+                <input type="hidden" name="id" value={product.id} />
+                <img
+                  className="product-image"
+                  src={product.featuredImage}
+                  alt=""
+                />
+                <div className="product-description">
+                  <h1 className="product-name">{product.name}</h1>
+                  <h4 className="product-company">{product.brand}</h4>
+                  <p className="product-price">{product.basePrice}</p>
+                  <p className="product-details">{product.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
 
         <div className="choice-container">

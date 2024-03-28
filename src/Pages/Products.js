@@ -1,13 +1,19 @@
 import "./Products.css";
-import data from "../data/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoGrid } from "react-icons/io5";
 import { BsList } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Products() {
   const [range, setRange] = useState(0);
 
-  const [search, setSearch] = useState("");
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://dummyapi.online/api/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data));
+  }, []);
 
   return (
     <>
@@ -33,7 +39,6 @@ function Products() {
               type="text"
               name="search"
               id="search"
-              onChange={(e) => setSearch(e.target.value)}
             />
             <select className="filter-select" name="category" id="category">
               <option value="all">all</option>
@@ -114,23 +119,26 @@ function Products() {
         </form>
 
         <div className="main">
-          {data
-            .filter((item) => {
-              return search.toLowerCase() === ""
-                ? item
-                : item.title.toLowerCase().includes(search);
-            })
-            .map((item) => (
-              <a href={item.id} className="product">
-                <input type="hidden" name="id" value={item.id} />
+          {Array.isArray(products) &&
+            products.map((product) => (
+              <Link
+                key={product.id}
+                className="product"
+                to={`products/${product.id}`}
+              >
+                <input type="hidden" name="id" value={product.id} />
                 <figure className="product-figure">
-                  <img src={item.img} alt="Product" className="product-image" />
+                  <img
+                    src={product.featuredImage}
+                    alt="Product"
+                    className="product-image"
+                  />
                 </figure>
                 <div className="product-details">
-                  <h2 className="product-name">{item.title}</h2>
-                  <span className="product-price">{item.price}</span>
+                  <h2 className="product-name">{product.name}</h2>
+                  <span className="product-price">${product.basePrice}</span>
                 </div>
-              </a>
+              </Link>
             ))}
         </div>
       </div>
