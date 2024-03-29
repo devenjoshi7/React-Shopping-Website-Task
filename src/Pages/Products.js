@@ -15,6 +15,19 @@ function Products() {
       .then((data) => setProducts(data));
   }, []);
 
+  /* useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    const response = await fetch("https://dummyapi.online/api/products");
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+    const data = await response.json();
+    setProducts(data);
+  }; */
+
   return (
     <>
       <div>
@@ -106,7 +119,7 @@ function Products() {
           </div>
           <div className="count-container">
             <label className="product-count" htmlFor="no-of-products">
-              22 Products
+              24 Products
             </label>
           </div>
           <div className="product-display">
@@ -124,7 +137,7 @@ function Products() {
               <Link
                 key={product.id}
                 className="product"
-                to={`products/${product.id}`}
+                to={`/products/${product.id}`}
               >
                 <input type="hidden" name="id" value={product.id} />
                 <figure className="product-figure">

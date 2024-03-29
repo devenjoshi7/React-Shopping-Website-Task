@@ -32,16 +32,17 @@
     display: flex;
 }
 .product-container .product-image {
-    height: 400px;
-    width: 320px;
+    height: 250px;
+    width: 250px;
     border-radius: 10px;
 }
 .product-container .product-description {
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: -230px;
+    margin-left: 400px;
+    margin-bottom: 10px;
 }
 .product-container .product-description .product-name {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 .product-container .product-description .product-company {
@@ -49,10 +50,10 @@
     margin-bottom: 10px;
 }
 .product-container .product-description .product-price {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .product-container .product-description .product-details {
-    line-height: 30px;
+    margin-bottom: 40px;
     margin-right: 200px;
 }
 

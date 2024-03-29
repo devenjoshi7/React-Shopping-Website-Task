@@ -3,15 +3,25 @@ import "./ProductDetails.css";
 import { useState, useEffect } from "react";
 
 function ProductDetails() {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState({});
 
   const { id } = useParams();
 
   useEffect(() => {
     fetch(`https://dummyapi.online/api/products/${id}`)
       .then((response) => response.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProduct(data));
   }, [id]);
+
+  /* useEffect(() => {
+    fetchProduct();
+  }, []);
+
+  const fetchProduct = async () => {
+    const response = await fetch(`https://dummyapi.online/api/products/${id}`);
+    const data = await response.json();
+    setProduct(data);
+  }; */
 
   return (
     <div>
@@ -31,23 +41,15 @@ function ProductDetails() {
         </div>
 
         <div className="product-container">
-          {Array.isArray(products) &&
-            products.map((product) => (
-              <div key={product.id}>
-                <input type="hidden" name="id" value={product.id} />
-                <img
-                  className="product-image"
-                  src={product.featuredImage}
-                  alt=""
-                />
-                <div className="product-description">
-                  <h1 className="product-name">{product.name}</h1>
-                  <h4 className="product-company">{product.brand}</h4>
-                  <p className="product-price">{product.basePrice}</p>
-                  <p className="product-details">{product.description}</p>
-                </div>
-              </div>
-            ))}
+          <div key={product.id}>
+            <img className="product-image" src={product.featuredImage} alt="" />
+            <div className="product-description">
+              <h1 className="product-name">{product.name}</h1>
+              <h4 className="product-company">{product.brand}</h4>
+              <p className="product-price">${product.basePrice}</p>
+              <p className="product-details">{product.description}</p>
+            </div>
+          </div>
         </div>
 
         <div className="choice-container">
