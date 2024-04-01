@@ -15,19 +15,6 @@ function Products() {
       .then((data) => setProducts(data));
   }, []);
 
-  /* useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  const fetchProducts = async () => {
-    const response = await fetch("https://dummyapi.online/api/products");
-    if (!response.ok) {
-      throw new Error("Failed to fetch products");
-    }
-    const data = await response.json();
-    setProducts(data);
-  }; */
-
   return (
     <>
       <div>

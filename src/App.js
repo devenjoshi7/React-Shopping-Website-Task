@@ -10,13 +10,28 @@ import { PuffLoader } from "react-spinners";
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
+
+  const handleClick = (item) => {
+    if (cart.indexOf(item) !== -1) return;
+    setCart([...cart, item]);
+  };
+
+  const handleChange = (item, d) => {
+    const ind = cart.indexOf(item);
+    const arr = cart;
+    arr[ind].amount += d;
+
+    if (arr[ind].amount === 0) arr[ind].amount = 1;
+    setCart([...arr]);
+  };
 
   return (
     <div className="main-div">
@@ -33,9 +48,21 @@ function App() {
           <Routes>
             <Route path="/Home" element={<Home />} />
             <Route path="/About" element={<About />} />
-            <Route path="/Cart" element={<Cart />} />
+            <Route
+              path="/Cart"
+              element={
+                <Cart
+                  cart={cart}
+                  setCart={setCart}
+                  handleChange={handleChange}
+                />
+              }
+            />
             <Route path="/" element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route
+              path="/products/:id"
+              element={<ProductDetails handleClick={handleClick} />}
+            />
           </Routes>
         </div>
       )}
