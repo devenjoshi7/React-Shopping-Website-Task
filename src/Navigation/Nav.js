@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { MdSunny } from "react-icons/md";
 
-function Nav() {
+function Nav({ size }) {
   return (
     <nav className="main-nav">
       <div className="profile-container">
@@ -40,6 +40,7 @@ function Nav() {
             <MdSunny className="theme-icon" size={24} />
             <NavLink to="/Cart">
               <PiShoppingCartLight className="cart-icon" size={28} />
+              <span className="counter">{size}</span>
             </NavLink>
           </div>
         </nav>
