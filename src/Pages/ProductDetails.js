@@ -3,9 +3,11 @@ import "./ProductDetails.css";
 import { useState, useEffect } from "react";
 import { PuffLoader } from "react-spinners";
 
-function ProductDetails({ handleClick }) {
+function ProductDetails({ addToCart }) {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
+  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedQuantity, setSelectedQuantity] = useState(1);
 
   const { id } = useParams();
 
@@ -17,6 +19,24 @@ function ProductDetails({ handleClick }) {
         setLoading(false);
       });
   }, [id]);
+
+  const handleColorSelection = (color) => {
+    if (selectedColor === color) {
+      setSelectedColor(null);
+    } else {
+      setSelectedColor(color);
+    }
+  };
+
+  const handleQuantityChange = (e) => {
+    setSelectedQuantity(parseInt(e.target.value));
+  };
+
+  const handleAddToCart = () => {
+    if (selectedColor) {
+      addToCart({ product, color: selectedColor, quantity: selectedQuantity });
+    }
+  };
 
   return (
     <div>
@@ -66,43 +86,37 @@ function ProductDetails({ handleClick }) {
               </div>
 
               <div className="button-container">
-                <button className="color-one" type="button"></button>
-                <button className="color-two" type="button"></button>
+                {product.colorOptions.map((color, index) => (
+                  <button
+                    key={index}
+                    className={`color-button${
+                      selectedColor === color ? " selected" : ""
+                    }`}
+                    onClick={() => handleColorSelection(color)}
+                  >
+                    {selectedColor === color ? <span>&#10003;</span> : color}
+                  </button>
+                ))}
               </div>
 
               <div className="quantity-container">
                 <h4 className="product-amount">Amount</h4>
-                <select className="product-quantity" name="amount" id="amount">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
+                <select
+                  className="product-quantity"
+                  id="quantity"
+                  value={selectedQuantity}
+                  onChange={handleQuantityChange}
+                >
+                  {[...Array(20).keys()].map((quantity) => (
+                    <option key={quantity} value={quantity + 1}>
+                      {quantity + 1}
+                    </option>
+                  ))}
                 </select>
               </div>
 
               <div className="add-to-bag-container">
-                <button
-                  className="product-bag"
-                  onClick={() => {
-                    handleClick(product);
-                  }}
-                >
+                <button className="product-bag" onClick={handleAddToCart}>
                   ADD TO BAG
                 </button>
               </div>

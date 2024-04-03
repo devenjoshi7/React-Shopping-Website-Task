@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart, removeFromCart }) => {
   const [quantity, setQuantity] = useState(1);
-
-  const handleRemove = (id) => {
-    const arr = cart.filter((item) => item.id !== id);
-    setCart(arr);
-  };
 
   const increment = () => {
     setQuantity(quantity + 1);
@@ -22,6 +17,12 @@ const Cart = ({ cart, setCart }) => {
     }
   };
 
+  let totalPrice = 0;
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
+    totalPrice += item.product.basePrice * quantity;
+  }
+
   return (
     <div>
       {cart.length === 0 ? (
@@ -30,27 +31,35 @@ const Cart = ({ cart, setCart }) => {
           <hr />
         </div>
       ) : (
-        cart.map((item) => (
-          <div className="cart-box" key={item.id}>
-            <div className="cart-img">
-              <img src={item.featuredImage} alt="" />
-              <p>{item.name}</p>
+        <div>
+          {cart.map((item) => (
+            <div className="cart-box" key={item.id}>
+              <div className="cart-img">
+                <img
+                  src={item.product.featuredImage}
+                  alt=""
+                  height={100}
+                  width={200}
+                />
+                <p>{item.product.name}</p>
+                <p>{item.product.brand}</p>
+                <p>{item.color}</p>
+              </div>
+              <div>
+                <button onClick={increment}>+</button>
+                <span>{quantity}</span>
+                <button onClick={decrement}>-</button>
+              </div>
+              <div>
+                <span>${item.product.basePrice * quantity}</span>
+                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+              </div>
+              <div className="total"></div>
             </div>
-            <div>
-              <button onClick={increment}>+</button>
-              <span>{quantity}</span>
-              <button onClick={decrement}>-</button>
-            </div>
-            <div>
-              <span>${item.basePrice * quantity}</span>
-              <button onClick={() => handleRemove(item.id)}>Remove</button>
-            </div>
-            <div className="total">
-              <span>Total Amount : </span>
-              <span>Rs - ${item.basePrice * quantity}</span>
-            </div>
-          </div>
-        ))
+          ))}
+          <span>Total Amount : </span>
+          <span>Rs - ${totalPrice}</span>
+        </div>
       )}
     </div>
   );

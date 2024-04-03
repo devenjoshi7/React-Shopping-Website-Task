@@ -66,27 +66,18 @@
 .choice-container .colors-container {
     font-size: 18px;
 }
-.choice-container .button-container .color-one {
+.choice-container .button-container .color-button {
     border-radius: 50px;
-    background-color: rgb(44, 240, 44);
     padding: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     margin-top: 10px;
+    color: white;
 }
-.choice-container .button-container .color-one:hover {
+.choice-container .button-container .color-button:hover {
     cursor: pointer;
 }
-.choice-container .button-container .color-two {
-    border-radius: 50px;
-    background-color: rgb(21, 59, 248);
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
-.choice-container .button-container .color-two:hover {
-    cursor: pointer;
-}
+
 .choice-container .quantity-container .product-amount {
     font-size: 18px;
     margin-bottom: 15px;

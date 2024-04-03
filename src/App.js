@@ -10,26 +10,36 @@ import { useState } from "react";
 function App() {
   const [cart, setCart] = useState([]);
 
-  const handleClick = (item) => {
-    if (cart.indexOf(item) !== -1) return;
+  const addToCart = (item) => {
     setCart([...cart, item]);
   };
+
+  const removeFromCart = (index) => {
+    const updatedCart = [...cart];
+    updatedCart.splice(index, 1);
+    setCart(updatedCart);
+  };
+
+  let totalQuantity = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalQuantity += cart[i].quantity;
+  }
 
   return (
     <div className="main-div">
       <div>
-        <Nav size={cart.length} />
+        <Nav size={totalQuantity} />
         <Routes>
           <Route path="/Home" element={<Home />} />
           <Route path="/About" element={<About />} />
           <Route
             path="/Cart"
-            element={<Cart cart={cart} setCart={setCart} />}
+            element={<Cart cart={cart} removeFromCart={removeFromCart} />}
           />
           <Route path="/" element={<Products />} />
           <Route
             path="/products/:id"
-            element={<ProductDetails handleClick={handleClick} />}
+            element={<ProductDetails addToCart={addToCart} />}
           />
         </Routes>
       </div>
