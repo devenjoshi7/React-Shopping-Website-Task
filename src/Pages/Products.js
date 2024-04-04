@@ -8,7 +8,7 @@ import { PuffLoader } from "react-spinners";
 function Products() {
   const [range, setRange] = useState(0);
   const [loading, setLoading] = useState(true);
-
+  const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -52,22 +52,19 @@ function Products() {
                 type="text"
                 name="search"
                 id="search"
+                onChange={(e) => setSearch(e.target.value)}
               />
               <select className="filter-select" name="category" id="category">
                 <option value="all">all</option>
-                <option value="Tables">Tables</option>
-                <option value="Chairs">Chairs</option>
-                <option value="Kids">Kids</option>
-                <option value="Sofas">Sofas</option>
-                <option value="Beds">Beds</option>
+                <option value="Mobiles">Mobiles</option>
+                <option value="Tablets">Tablets</option>
+                <option value="Laptops">Laptops</option>
               </select>
               <select className="filter-select" name="company" id="company">
                 <option value="all">all</option>
-                <option value="Modenza">Modenza</option>
-                <option value="Luxora">Luxora</option>
-                <option value="Artifex">Artifex</option>
-                <option value="Comfora">Comfora</option>
-                <option value="HomeStead">Homestead</option>
+                <option value="Apple">Apple</option>
+                <option value="Samsung">Samsung</option>
+                <option value="Lenovo">Lenovo</option>
               </select>
               <select className="filter-select" name="sort" id="sort">
                 <option value="a-z">a-z</option>
@@ -99,7 +96,7 @@ function Products() {
                 name="price"
                 id="price"
                 min={0}
-                max={1000}
+                max={2500}
                 onChange={(e) => setRange(e.target.value)}
               />
               <input
@@ -114,7 +111,7 @@ function Products() {
                 0
               </label>
               <label className="max-range" htmlFor="max">
-                Max:$1000.00
+                Max:$2500.00
               </label>
             </div>
             <div className="count-container">
@@ -133,26 +130,34 @@ function Products() {
 
           <div className="main">
             {Array.isArray(products) &&
-              products.map((product) => (
-                <Link
-                  key={product.id}
-                  className="product"
-                  to={`/products/${product.id}`}
-                >
-                  <input type="hidden" name="id" value={product.id} />
-                  <figure className="product-figure">
-                    <img
-                      src={product.featuredImage}
-                      alt="Product"
-                      className="product-image"
-                    />
-                  </figure>
-                  <div className="product-details">
-                    <h2 className="product-name">{product.name}</h2>
-                    <span className="product-price">${product.basePrice}</span>
-                  </div>
-                </Link>
-              ))}
+              products
+                .filter((product) => {
+                  return search.toLowerCase() === ""
+                    ? product
+                    : product.name.toLowerCase().includes(search);
+                })
+                .map((product) => (
+                  <Link
+                    key={product.id}
+                    className="product"
+                    to={`/products/${product.id}`}
+                  >
+                    <input type="hidden" name="id" value={product.id} />
+                    <figure className="product-figure">
+                      <img
+                        src={product.featuredImage}
+                        alt="Product"
+                        className="product-image"
+                      />
+                    </figure>
+                    <div className="product-details">
+                      <h2 className="product-name">{product.name}</h2>
+                      <span className="product-price">
+                        ${product.basePrice}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
           </div>
         </div>
       )}

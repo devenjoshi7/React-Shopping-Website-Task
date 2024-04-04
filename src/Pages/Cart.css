@@ -1,0 +1,115 @@
+.main-div .empty-cart {
+    margin-left: 150px;
+    margin-right: 180px;
+    padding: 40px;
+}
+.main-div .empty-cart h1 {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+}
+.main-div .empty-cart hr {
+    border: 1px solid black;
+}
+
+.cart-product .cart-box {
+    display: flex;
+}
+
+.cart-product .cart-box .cart-img {
+    margin-left: 180px;
+    margin-right: 100px;
+    margin-top: 50px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-product .cart-box .cart-details {
+    margin-top: 40px;
+    line-height: 32px;
+    width: 380px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.cart-product .cart-box .cart-button {
+    margin-top: 80px;
+    margin-right: 100px;
+}
+.cart-product .cart-box .cart-button button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+.cart-product .cart-box .cart-button button:hover{
+    cursor: pointer;
+}
+.cart-product .cart-box .cart-button span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart-product .cart-box .cart-price {
+    margin-top: 80px;
+}
+.cart-product .cart-box .cart-price span {
+    margin-right: 50px;
+    font-weight: bold;
+}
+.cart-product .cart-box .cart-price button {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+}
+.cart-product .cart-box .cart-price button:hover {
+    cursor: pointer;
+}
+
+.cart-product .cart-total {
+    display: flex;
+    justify-content: end;
+    margin-right: 190px;
+    margin-top: 30px;
+}
+.cart-product hr {
+    border: 1px solid black;
+    margin-left: 180px;
+    margin-right: 190px;
+    margin-top: 10px;
+}
+.cart-product .cart-total .amount-text {
+    background-color: rgb(39, 37, 55);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.cart-product .cart-total .amount-figure {
+    background-color: rgb(39, 37, 55);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

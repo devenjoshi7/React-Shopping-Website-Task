@@ -34,7 +34,13 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route
             path="/Cart"
-            element={<Cart cart={cart} removeFromCart={removeFromCart} />}
+            element={
+              <Cart
+                cart={cart}
+                removeFromCart={removeFromCart}
+                setCart={setCart}
+              />
+            }
           />
           <Route path="/" element={<Products />} />
           <Route
