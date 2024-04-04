@@ -47,7 +47,7 @@ const Cart = ({ cart, removeFromCart }) => {
               </div>
               <div>
                 <button onClick={increment}>+</button>
-                <span>{quantity}</span>
+                <span>{item.quantity}</span>
                 <button onClick={decrement}>-</button>
               </div>
               <div>
