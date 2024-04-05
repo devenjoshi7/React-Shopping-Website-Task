@@ -10,8 +10,17 @@ import { useState } from "react";
 function App() {
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
+  const addToCart = (product, color, quantity) => {
+    const existingItemIndex = cart.findIndex(
+      (item) => item.product.id === product.id && item.color === color
+    );
+    if (existingItemIndex !== -1) {
+      const updatedCart = [...cart];
+      updatedCart[existingItemIndex].quantity += quantity;
+      setCart(updatedCart);
+    } else {
+      setCart((prevCart) => [...prevCart, { product, color, quantity }]);
+    }
   };
 
   const removeFromCart = (index) => {

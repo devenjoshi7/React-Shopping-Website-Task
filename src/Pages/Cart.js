@@ -1,9 +1,14 @@
 import "./Cart.css";
 
 const Cart = ({ cart, removeFromCart, setCart }) => {
-  const handleQuantityChange = (id, newQuantity) => {
+  const handleQuantityChange = (id, color, newQuantity) => {
+    if (newQuantity <= 1) {
+      newQuantity = 1;
+    } else if (newQuantity > 20) {
+      newQuantity = 20;
+    }
     const updatedCart = cart.map((item) => {
-      if (item.product.id === id) {
+      if (item.product.id === id && item.color === color) {
         return { ...item, quantity: newQuantity };
       }
       return item;
@@ -39,7 +44,11 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
               <div className="cart-button">
                 <button
                   onClick={() =>
-                    handleQuantityChange(item.product.id, item.quantity + 1)
+                    handleQuantityChange(
+                      item.product.id,
+                      item.color,
+                      item.quantity + 1
+                    )
                   }
                 >
                   +
@@ -47,7 +56,11 @@ const Cart = ({ cart, removeFromCart, setCart }) => {
                 <span>{item.quantity}</span>
                 <button
                   onClick={() =>
-                    handleQuantityChange(item.product.id, item.quantity - 1)
+                    handleQuantityChange(
+                      item.product.id,
+                      item.color,
+                      item.quantity - 1
+                    )
                   }
                 >
                   -

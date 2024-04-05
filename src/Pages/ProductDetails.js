@@ -34,7 +34,7 @@ function ProductDetails({ addToCart }) {
 
   const handleAddToCart = () => {
     if (selectedColor) {
-      addToCart({ product, color: selectedColor, quantity: selectedQuantity });
+      addToCart(product, selectedColor, selectedQuantity);
     }
   };
 
